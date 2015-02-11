@@ -5,5 +5,6 @@
     </head>
     <body <?php body_class(); ?>>
         <p>Character set: <?php bloginfo('charset'); ?> </p>
+        <?php echo get_template_directory() ?>;
     </body>
 </html>
