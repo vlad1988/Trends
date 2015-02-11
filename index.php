@@ -14,7 +14,7 @@
             <?php get_template_part('content', 'none') ?>
         <?php endif; ?>
         
-        
+        <?php trends_paging_nav(); ?>
 
         <footer>
             <?php wp_footer(); ?> 
