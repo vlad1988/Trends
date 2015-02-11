@@ -99,6 +99,7 @@ if (!function_exists('trends_post_meta')) {
                 echo "</li>";
             }
         }
+        echo '</ul>';
     }
 
 }

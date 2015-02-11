@@ -1,0 +1,1 @@
+<h4><?php _e('Nothing found', 'trends'); ?></h4>

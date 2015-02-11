@@ -18,4 +18,21 @@
     <p class="meta-information">
         <?php trends_post_meta(); ?>
     </p>
+    <div class="content">
+        <?php
+        if (is_search()) {
+            the_excerpt();
+        } else {
+            the_content(__('Continue reading &rarr;', 'trends'));
+            wp_link_pages();
+        }
+        ?>
+    </div>
+    <footer>
+        <?php
+        if (is_single()) {
+            echo "<h4>" . __('Written by: ', 'trends') . get_the_author() . "</h4>";
+        }
+        ?>
+    </footer>
 </article>
