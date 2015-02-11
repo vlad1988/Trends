@@ -36,6 +36,7 @@ if(!function_exists("trends_setup")){
         $lang_dir = THEMEROOT.'/languages';
         load_theme_textdomain('trends', $lang_dir);
         add_theme_support('post-formats', array('gallery', 'link', 'image', 'quote', 'video', 'audio'));
+        add_theme_support('automatic-feed-links');
     }
     add_action('after_theme_setup', 'trends_setup');
 }
