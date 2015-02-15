@@ -1,4 +1,3 @@
-    <body <?php body_class(); ?>>
 
         <?php get_header(); ?>
         <?php if (have_posts()):while (have_posts()):the_post(); ?>
@@ -12,8 +11,4 @@
 
         <?php get_sidebar(); ?>
         <?php get_footer(); ?>
-        <footer>
-            <?php wp_footer(); ?> 
-        </footer>
-    </body>
-</html>
+

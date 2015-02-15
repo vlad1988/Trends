@@ -122,3 +122,37 @@ if (!function_exists('trends_paging_nav')) {
     }
 
 }
+
+/*
+ * 7 - Register Sidebar
+ */
+
+if (!function_exists('trends_widget_init')) {
+
+    function trends_widget_init() {
+        if(function_exists('register_sidebar')){
+            register_sidebar(
+                    array(
+                        'name'=>__('Main widget', 'trends'),
+                        'id'=>'sidebar-1',
+                        'description' => __('Main widget area','trends'),
+                        'defore_widget' => '<div id="%1s">',
+                        'after_widdget' => '</div>',
+                        'before_title' => '<h5>',
+                        'after_title' => '</h5>'
+                    ));
+            register_sidebar(
+                    array(
+                        'name'=>__('Footer widget', 'trends'),
+                        'id'=>'sidebar-2',
+                        'description' => __('Footer widget area','trends'),
+                        'defore_widget' => '<div id="%1s">',
+                        'after_widdget' => '</div>',
+                        'before_title' => '<h5>',
+                        'after_title' => '</h5>'
+                    ));
+        }
+    }
+
+    add_action('widgets_init', 'trends_widget_init');
+}
