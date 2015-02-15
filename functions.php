@@ -92,14 +92,33 @@ if (!function_exists('trends_post_meta')) {
                 echo comments_popup_link(__('Leave a comment', 'trends'), __('One comment so far', 'trends'), __('View all % comments', 'trends'));
                 echo '</li>';
             endif;
-            
-            if(is_user_logged_in()){
+
+            if (is_user_logged_in()) {
                 echo "<li>";
-                edit_post_link(__('Edit', 'trends'), '<span>','</span>');
+                edit_post_link(__('Edit', 'trends'), '<span>', '</span>');
                 echo "</li>";
             }
         }
         echo '</ul>';
+    }
+
+}
+
+/*
+ * 6. - Display post paging
+ */
+
+if (!function_exists('trends_paging_nav')) {
+
+    function trends_paging_nav() {
+        echo "<ul>";
+        if (get_previous_post_link()) {
+            echo "<li>" . previous_posts_link(__('Newer', 'trends')) . "</li>";
+        }
+        if (get_next_post_link()) {
+            echo "<li>" . next_posts_link(__('Older', 'trends')) . "</li>";
+        }
+        echo "</ul>";
     }
 
 }
